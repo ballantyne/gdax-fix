@@ -49,7 +49,7 @@ setTimeout(function() {
 Donations
 ------------
 
-Here are a few addresses where you can send me bitcoins.  If this library helps you and you are feeling especially generous I know that you will feel compelled to buy me beer with magical internet money.  
+Here are a few addresses where you can send me bitcoins.  If this library helps you and you are feeling especially generous I know that you will feel compelled to buy me jello pudding pop with magical internet money.  
 
 
 * BTC: 1A1BrPyWpdXLPsidjaMAmyNG71vFwmKPSR
