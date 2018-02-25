@@ -8,7 +8,7 @@ Usage
 ------------
 
 ```javascript
-var keys = {
+var options = {
   "key": "",
   "secret": "",
   "password": "",
@@ -18,7 +18,7 @@ var keys = {
 
 
 var Fix = require('gdax-fix');
-var fix = new Fix(keys);
+var fix = new Fix(options);
 
 fix.verbose = true;
 
