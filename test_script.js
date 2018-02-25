@@ -2,7 +2,7 @@
 var keys = {
   "key": "",
   "secret": "",
-  "password": "",
+  "passphrase": "",
   "host": "fix.gdax.com",
   "port": "4198"
 }

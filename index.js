@@ -398,7 +398,7 @@ module.exports         = klass(function(options) {
     message.SendingTime   = new Date();
     message.set(108, 30);
     message.set(98, 0);
-    message.set(554, this.password);
+    message.set(554, this.passphrase);
 
     var presign = [
       message.SendingTime,
@@ -406,7 +406,7 @@ module.exports         = klass(function(options) {
       this.transport.outgoing_seq_num,
       this.transport.sender_comp_id,
       this.transport.target_comp_id,
-      this.password
+      this.passphrase
     ];
 
     var what              = presign.join('\x01');

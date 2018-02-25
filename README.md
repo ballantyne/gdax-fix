@@ -2,7 +2,14 @@ gdax-fix
 ------------
 
 
-Here is a FIX client for the gdax api.  It is a nice complement to the websocket client, and allows you to have similar speed and through a socket for your orders and for the tracking of the completion of orders.  I think that it might also show when an order is partially filled , but I don't have enough coins to test that, so I haven't done much to wrap that functionality.  I tried to make all the different events that are passed around available to the on function, and you can see what events happen by setting the verbose property to true.  I think that this would allow people to make a very nice client for algorithmic trading.  I have some backbone models that do the accounting, but I haven't included them in this package because I didn't know if everyone would want to use those.  Backbone also has events, so you can connect the cancel or filled events to track the changes of balance and then reorder.  I tried to make this as barebones as possible so that it would be as useful as possible to the most people.  
+Here is a FIX client for the gdax api.  It is a nice complement to the websocket client, and allows you to have similar speed and through a socket for your orders and for the tracking of the completion of orders.  I think that it might also show when an order is partially filled , but I don't have enough coins to test that, so I haven't done much to wrap that functionality.  I tried to make all the different events that are passed around available to the on function, and you can see what events happen by setting the verbose property to true.  I think that this would allow people to make a very nice client for algorithmic trading.  I tried to make this as minimal an implementation as possible so that it would be as useful as possible to the most people.  
+
+
+Installation
+------------
+```bash
+npm install gdax-fix --save
+```
 
 Usage
 ------------
@@ -11,7 +18,7 @@ Usage
 var options = {
   "key": "",
   "secret": "",
-  "password": "",
+  "passphrase": "",
   "host": "fix.gdax.com",
   "port": "4198"
 }
@@ -41,7 +48,7 @@ fix.on('rejected', function(report) {
 fix.connect();
 
 setTimeout(function() {
-  fix.sendOrder({symbol: 'BCH-BTC', side: 'sell', price: '0.15', amount: 0.46});
+  fix.sendOrder({symbol: 'LTC-BTC', side: 'sell', price: '0.02427', amount: 0.12615});
 }, 1000);
 
 ```
@@ -56,8 +63,6 @@ Here are a few addresses where you can send me bitcoins.  If this library helps 
 * BCH: qqhk5ce25fs706sk9vlnhtezpk3ezp9euc82cyky8v
 * ETH: 0xC33DBB4D997e6A3d9457F41ff07fb13f8DA7bF64
 * LTC: LS2P54xNErZ36pXp95zqTyST7XTx5XHEZy
-
-Also, I learned a lot from this repo, https://github.com/Saurox/GDAX-Fix-Client/blob/master/index.js so maybe send that person a buck or two.
 
 
 Contributing
