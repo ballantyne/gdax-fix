@@ -48,7 +48,7 @@ fix.on('rejected', function(report) {
 fix.connect();
 
 setTimeout(function() {
-  fix.sendOrder({symbol: 'LTC-BTC', side: 'sell', price: '0.02427', amount: 0.12615});
+  fix.sendOrder({symbol: 'ETH-BTC', side: 'sell', price: '0.08775', amount: 0.12615});
 }, 1000);
 
 ```
