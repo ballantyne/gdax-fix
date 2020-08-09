@@ -53,7 +53,7 @@ setTimeout(function() {
 
 ```
 
-Donations
+Tips
 ------------
 
 Here are a few addresses where you can send me bitcoins.  If this library helps you and you are feeling especially generous I know that you will feel compelled to buy me jianbing with magical internet money.  
